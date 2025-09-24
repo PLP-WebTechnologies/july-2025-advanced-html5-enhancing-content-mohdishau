@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Web Assignment by Mohammed</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="light-theme">
+    <div class="container">
+        <header>
+            <h1>🚀 Interactive Web Experience</h1>
+            <button class="theme-toggle" id="themeToggle">🌙 Dark Mode</button>
+        </header>
+
+        <!-- Part 1 & 2: Interactive Elements -->
+        
+        <!-- Counter/Button Game -->
+        <section class="section">
+            <h2>🎮 Interactive Counter Game</h2>
+            <p>Test your clicking skills! Try different actions and see the counter respond.</p>
+            
+            <div class="counter-display" id="counterDisplay">0</div>
+            
+            <div class="counter-buttons">
+                <button class="btn" id="incrementBtn">+1</button>
+                <button class="btn" id="increment5Btn">+5</button>
+                <button class="btn" id="decrementBtn">-1</button>
+                <button class="btn danger" id="resetBtn">Reset</button>
+                <button class="btn success" id="randomBtn">Random</button>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section">
+            <h2>❓ Collapsible FAQ</h2>
+            <p>Click on questions to reveal answers with smooth animations.</p>
+            
+            <div class="faq-item">
+                <div class="faq-question" data-faq="1">
+                    <span>What is JavaScript?</span>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer" data-answer="1">
+                    <p>JavaScript is a high-level, dynamic programming language that's essential for web development. It enables interactive web pages and is a core technology alongside HTML and CSS.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" data-faq="2">
+                    <span>How do event listeners work?</span>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer" data-answer="2">
+                    <p>Event listeners are functions that wait for specific events (like clicks or key presses) to occur on DOM elements. When the event happens, the listener function executes, allowing you to respond to user interactions.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" data-faq="3">
+                    <span>What is DOM manipulation?</span>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer" data-answer="3">
+                    <p>DOM (Document Object Model) manipulation refers to changing the structure, content, or styling of web pages dynamically using JavaScript. This includes adding/removing elements, changing text content, or modifying CSS classes.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tabbed Interface -->
+        <section class="section">
+            <h2>📑 Tabbed Content Interface</h2>
+            <p>Navigate through different sections using tabs.</p>
+            
+            <div class="tab-buttons">
+                <button class="tab-btn active" data-tab="overview">Overview</button>
+                <button class="tab-btn" data-tab="features">Features</button>
+                <button class="tab-btn" data-tab="examples">Examples</button>
+                <button class="tab-btn" data-tab="resources">Resources</button>
+            </div>
+
+            <div class="tab-content">
+                <div class="tab-panel active" id="overview">
+                    <h3>Project Overview</h3>
+                    <p>This interactive web application demonstrates modern JavaScript event handling, DOM manipulation, and form validation techniques. Each component is built with clean, modular code that follows best practices for maintainability and user experience.</p>
+                    <ul>
+                        <li>✅ Event-driven architecture</li>
+                        <li>✅ Responsive design</li>
+                        <li>✅ Accessible components</li>
+                        <li>✅ Progressive enhancement</li>
+                    </ul>
+                </div>
+
+                <div class="tab-panel" id="features">
+                    <h3>Key Features</h3>
+                    <p>Explore the interactive elements built into this application:</p>
+                    <ul>
+                        <li><strong>Theme Toggle:</strong> Switch between light and dark modes</li>
+                        <li><strong>Counter Game:</strong> Interactive number manipulation with multiple actions</li>
+                        <li><strong>Collapsible FAQ:</strong> Smooth accordion-style content sections</li>
+                        <li><strong>Dropdown Menu:</strong> Click-to-reveal navigation component</li>
+                        <li><strong>Form Validation:</strong> Real-time input validation with custom error messages</li>
+                    </ul>
+                </div>
+
+                <div class="tab-panel" id="examples">
+                    <h3>Code Examples</h3>
+                    <p>Here are some key JavaScript patterns used in this project:</p>
+                    <pre><code>// Event Listener Pattern
+element.addEventListener('click', function(event) {
+    // Handle the event
+    event.preventDefault();
+});</code></pre>
+                    <pre><code>// DOM Manipulation
+document.querySelector('.class').classList.toggle('active');</code></pre>
+                </div>
+
+                <div class="tab-panel" id="resources">
+                    <h3>Learning Resources</h3>
+                    <p>Continue your JavaScript journey with these resources:</p>
+                    <ul>
+                        <li>MDN Web Docs - JavaScript Guide</li>
+                        <li>JavaScript.info - Modern JavaScript Tutorial</li>
+                        <li>freeCodeCamp - JavaScript Algorithms</li>
+                        <li>Eloquent JavaScript - Online Book</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dropdown Menu -->
+        <section class="section">
+            <h2>📋 Interactive Dropdown</h2>
+            <p>Click the button below to see a custom dropdown menu in action.</p>
+            
+            <div class="dropdown">
+                <button class="dropdown-toggle" id="dropdownToggle">
+                    Choose Action <span>▼</span>
+                </button>
+                <div class="dropdown-menu" id="dropdownMenu">
+                    <div class="dropdown-item" data-action="alert">Show Alert</div>
+                    <div class="dropdown-item" data-action="console">Log to Console</div>
+                    <div class="dropdown-item" data-action="color">Change Colors</div>
+                    <div class="dropdown-item" data-action="animate">Animate Page</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Part 3: Form Validation -->
+        <section class="section">
+            <h2>📝 Advanced Form Validation</h2>
+            <p>Fill out this form to see real-time validation in action. All validation is handled by custom JavaScript.</p>
+            
+            <form id="contactForm" novalidate>
+                <div class="form-group">
+                    <label for="fullName">Full Name *</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                    <div class="error-message" id="fullNameError"></div>
+                    <div class="success-message" id="fullNameSuccess">✓ Name looks good!</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                    <div class="error-message" id="emailError"></div>
+                    <div class="success-message" id="emailSuccess">✓ Valid email address!</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone">
+                    <div class="error-message" id="phoneError"></div>
+                    <div class="success-message" id="phoneSuccess">✓ Valid phone number!</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password *</label>
+                    <input type="password" id="password" name="password" required>
+                    <div class="error-message" id="passwordError"></div>
+                    <div class="success-message" id="passwordSuccess">✓ Strong password!</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password *</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                    <div class="error-message" id="confirmPasswordError"></div>
+                    <div class="success-message" id="confirmPasswordSuccess">✓ Passwords match!</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" name="age" min="13" max="120">
+                    <div class="error-message" id="ageError"></div>
+                    <div class="success-message" id="ageSuccess">✓ Valid age!</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="website">Website (Optional)</label>
+                    <input type="url" id="website" name="website">
+                    <div class="error-message" id="websiteError"></div>
+                    <div class="success-message" id="websiteSuccess">✓ Valid URL!</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                    <div class="error-message" id="messageError"></div>
+                    <div class="success-message" id="messageSuccess">✓ Message looks good!</div>
+                </div>
+
+                <button type="submit" class="btn" style="width: 100%; margin-top: 1rem;">
+                    Submit Form
+                </button>
+
+                <div class="form-success" id="formSuccess">
+                    <h3>🎉 Success!</h3>
+                    <p>Your form has been submitted successfully. All validation checks passed!</p>
+                </div>
+            </form>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
